@@ -1,0 +1,51 @@
+:root {
+  --light-blue: #E9F5FF;
+  --dark-blue: #69B7FF;
+}
+
+
+html, body {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Optima';
+  color: var(--dark-blue);
+
+  font-size: 24px;
+}
+
+h1, h2, h3 {
+  font-family: 'Fantasy Brooklyn';
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+
+}
+
+@font-face {
+    font-family: 'Fantasy Brooklyn';
+    src:
+        url('/fonts/FantasyBrooklyn-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Fantasy Brooklyn';
+    font-style: italic;
+    src:
+        url('/fonts/FantasyBrooklyn-Italic.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Optima';
+    src:
+        url('/fonts/Optima-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Optima';
+    font-style: italic;
+    src:
+        url('/fonts/Optima-Italic.ttf') format('ttf');
+}

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Fantasy Brooklyn';
+    src:
+        url('/fonts/FantasyBrooklyn-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Fantasy Brooklyn';
+    font-style: italic;
+    src:
+        url('/fonts/FantasyBrooklyn-Italic.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Averia Serif Libre';
+    src:
+        url('/fonts/AveriaSerifLibre-Light.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Averia Serif Libre';
+    font-style: italic;
+    src:
+        url('/fonts/AveriaSerifLibre-LightItalic.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Averia Serif Libre';
+    font-weight: bold;
+    src:
+        url('/fonts/AveriaSerifLibre-Bold.ttf') format('ttf');
+}
+
+
+@font-face {
+    font-family: 'Averia Serif Libre';
+    font-weight: bold;
+    font-style: italic;
+    src:
+        url('/fonts/AveriaSerifLibre-Bold.ttf') format('ttf');
+}
