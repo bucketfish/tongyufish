@@ -1,4 +1,6 @@
 <script lang="ts">
+  // import { env } from '$lib/env'
+
   let { mouse } = $props();
   import { T } from '@threlte/core'
   import { useGltf } from '@threlte/extras'
@@ -21,7 +23,7 @@ position={[7, -10, 12]} intensity={3}
 />
 
 
-{#await useGltf('${import.meta.env.BASE_URL}/shark.glb') then gltf}
+{#await useGltf(`${import.meta.env.BASE_URL}shark.glb`) then gltf}
   <T
     is={gltf.scene}
     scale={3.2}

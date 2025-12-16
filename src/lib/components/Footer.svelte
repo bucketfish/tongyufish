@@ -1,8 +1,16 @@
 <script>
+  // import { env } from '$lib/env'
+
   const commit = import.meta.env.VITE_COMMIT_HASH ?? 'dev';
   const commit_short = commit.slice(0, 7)
 
-  const commitDate = (import.meta.env.VITE_COMMIT_DATE ?? 'today').toLowerCase();
+  const commitDate = (import.meta.env.VITE_COMMIT_DATE
+  ? new Date(import.meta.env.VITE_COMMIT_DATE).toLocaleDateString('en-US', {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric'
+    })
+  : '').toLowerCase();
 
 </script>
 

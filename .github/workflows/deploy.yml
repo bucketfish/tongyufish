@@ -29,9 +29,10 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          BASE_PATH: '/${{ github.event.repository.name }}'
+          VITE_COMMIT_HASH: ${{ github.sha }}
+          VITE_COMMIT_DATE: ${{ github.event.head_commit.timestamp }}
         run: |
-          echo "VITE_COMMIT_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
-          echo "VITE_COMMIT_DATE=$(git show -s --date=format:'%b %d, %Y' --format=%cd)" >> $GITHUB_ENV
           pnpm run build
 
       - name: Upload Artifacts

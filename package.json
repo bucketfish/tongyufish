@@ -34,6 +34,7 @@
 	"dependencies": {
 		"@threlte/core": "^8.3.1",
 		"@threlte/extras": "^9.7.1",
+		"dotenv": "^17.2.3",
 		"three": "^0.182.0",
 		"threlte-postprocessing": "^0.0.10"
 	}
