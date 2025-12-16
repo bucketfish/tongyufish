@@ -29,7 +29,6 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
-          BASE_PATH: '/${{ github.event.repository.name }}'
           VITE_COMMIT_HASH: ${{ github.sha }}
           VITE_COMMIT_DATE: ${{ github.event.head_commit.timestamp }}
         run: |
