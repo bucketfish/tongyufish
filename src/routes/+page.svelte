@@ -3,13 +3,11 @@
   import { AsciiRenderer } from '@threlte/extras'
 
 
+  import { browser } from '$app/environment';
   import Scene from '$lib/components/Scene.svelte'
   import '../global.css';
 
   import { onMount, onDestroy } from 'svelte';
-
-
-
 
   let innerWidth = 0;
   let innerHeight = 0;
@@ -24,21 +22,20 @@
 
   let raf;
   function tick() {
-    // lerp every frame
-    const ease = 0.01;
+    const ease = 0.005;
 
-    // simple exponential easing
     m.x += (target.x - m.x) * ease;
     m.y += (target.y - m.y) * ease;
 
-    raf = requestAnimationFrame(tick);
+    raf = window.requestAnimationFrame(tick);
   }
 
   onMount(() => {
-    raf = requestAnimationFrame(tick);
+    raf = window.requestAnimationFrame(tick);
   });
 
   onDestroy(() => {
+    if (!browser) return;
     cancelAnimationFrame(raf);
   });
 
