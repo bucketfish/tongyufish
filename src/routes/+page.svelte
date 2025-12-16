@@ -33,6 +33,7 @@
   }
 
   onMount(() => {
+    if (!browser) return;
     raf = window.requestAnimationFrame(tick);
   });
 
