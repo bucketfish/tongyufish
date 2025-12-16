@@ -4,10 +4,12 @@
 
 
   import { browser } from '$app/environment';
-  import Scene from '$lib/components/Scene.svelte'
+  import Scene from '$lib/components/Scene.svelte';
   import '../global.css';
 
   import { onMount, onDestroy } from 'svelte';
+
+  import Footer from '$lib/components/Footer.svelte';
 
   let innerWidth = 0;
   let innerHeight = 0;
@@ -71,6 +73,8 @@
     <li><p>say hi at <a href="mailto:hello@tongyu.fish">hello@tongyu.fish!</a></p></li>
     </ul>
   </div>
+
+  <Footer />
 </main>
 
 
@@ -95,32 +99,4 @@
     font-family: 'Optima';
   }
 
-  h1 {
-    font-size: 120px;
-    padding-left: 42px;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  ul {
-    padding-left: 22px;
-    margin-top: 4px;
-  }
-
-  li {
-    list-style-type: '> ';
-  }
-
-  p a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  p:hover a {
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 2px;
-  }
 </style>
