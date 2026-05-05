@@ -28,6 +28,13 @@ footer {
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+  font-size: 0.75em;
+  opacity: 50%;
+  transition: 0.2s opacity;
+}
+
+footer:hover {
+  opacity: 100%;
 }
 
 footer p {
