@@ -66,7 +66,7 @@
     <ul class="rest">
     <li><p><a href="/games">i make games</a></p></li>
     <li><p><a href="/design">i draw & design</a></p></li>
-    <li><p><a href="https://journal.tongyu.dev">i also have a journal</a></p></li>
+    <li><p><a href="https://journal.tongyu.fish">i also have a journal</a></p></li>
     </ul>
 
     <ul class="rest">
