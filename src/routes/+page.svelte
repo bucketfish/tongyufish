@@ -68,7 +68,6 @@
     <li><p><a href="/design">i draw & design</a></p></li>
     <li><p><a href="https://journal.tongyu.fish">i also have a journal</a></p></li>
     </ul>
-
     <ul class="rest">
     <li><p>i'm taking a gap year @ <a href="https://hackclub.com" target="_blank">hack club</a></p></li>
     <li><p>say hi at <a href="mailto:hello@tongyu.fish">hello@tongyu.fish!</a></p></li>
@@ -84,12 +83,14 @@
     background-color: var(--light-blue);
     overflow: hidden;
     height: 100vh;
+    height: 100dvh;
     width: 100vw;
   }
 
   .background {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     animation: scan-in 0.5s steps(24, end) 0.4s both;
   }
 
@@ -99,6 +100,49 @@
     left: 53vw;
 
     font-family: 'Optima';
+  }
+
+  @media (max-width: 768px) {
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .background {
+      flex: 0 0 38dvh;
+      width: 100vw;
+      height: 38dvh;
+    }
+
+    .content {
+      position: static;
+      padding: 16px 24px 0;
+    }
+
+    .content :global(h1) {
+      font-size: 64px;
+      line-height: 1;
+      margin: 0;
+    }
+
+    .content :global(.subtitle) {
+      margin: 0;
+    }
+
+    .content :global(ul) {
+      margin: 12px 0 0;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .background {
+      flex-basis: 32dvh;
+      height: 32dvh;
+    }
+
+    .content :global(h1) {
+      font-size: 52px;
+    }
   }
 
   .content h1 {
