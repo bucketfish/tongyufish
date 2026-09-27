@@ -40,7 +40,7 @@
 
 <div id="intro">
 <p class="nav-back" style="text-align: left"><a href="/">&larr; back to tongyu's site</a></p>
-<h2>portfolio</h2>
+<h2>tongyu's portfolio</h2>
 <div class="personal-info">
 <p>design, illustration, games, websites</p>
 <p class="flex-div">·</p>
