@@ -64,13 +64,14 @@
     <p class="subtitle rest">hello, i’m</p>
     <h1>tongyu!</h1>
     <ul class="rest">
-    <li><p><a href="/games">i make games</a></p></li>
-    <li><p><a href="/design">i draw & design</a></p></li>
-    <li><p><a href="https://journal.tongyu.fish">i also have a journal</a></p></li>
+    <li><p>i'm a first-year cognitive science student @ UCLA</p></li>
+    <li><p>previously, i took a gap year @ <a href="https://hackclub.com" target="_blank">hack club</a></p></li>
     </ul>
     <ul class="rest">
-    <li><p>i'm taking a gap year @ <a href="https://hackclub.com" target="_blank">hack club</a></p></li>
-    <li><p>say hi at <a href="mailto:hello@tongyu.fish">hello@tongyu.fish!</a></p></li>
+    <li><p><a href="/design">i draw, design, & code </a></p></li>
+    <li><p><a href="https://journal.tongyu.fish">i also have a journal</a></p></li>
+
+    <li><p>say hi at <a href="mailto:hi@tongyu.fish">hi@tongyu.fish!</a></p></li>
     </ul>
   </div>
 
@@ -80,7 +81,6 @@
 
 <style>
   main {
-    background-color: var(--light-blue);
     overflow: hidden;
     height: 100vh;
     height: 100dvh;
