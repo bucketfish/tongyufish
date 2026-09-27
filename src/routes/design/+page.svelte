@@ -6,13 +6,30 @@
   let activeTag = $state(null);
   let activeColl = $state(null);
   let open = $state(null);
+  let limit = $state(12);
 
-  const shown = $derived(
+  const filtered = $derived(
     data.items.filter(i =>
       (!activeTag || i.tags.includes(activeTag)) &&
       (!activeColl || i.collection === activeColl)
     )
   );
+
+  const shown = $derived(filtered.slice(0, limit));
+  const hasMore = $derived(limit < filtered.length);
+
+  $effect(() => {
+    activeTag; activeColl;
+    limit = 12;
+  });
+
+  function loadMore(node) {
+    const obs = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) limit += 12;
+    }, { rootMargin: '400px' });
+    obs.observe(node);
+    return { destroy: () => obs.disconnect() };
+  }
 
   const siblings = $derived(
     open?.collection
@@ -65,7 +82,7 @@
       {#if item.video}
         <video src={item.src} class={[...item.modifiers, ...item.tags].join(' ')} muted loop autoplay playsinline />
       {:else}
-        <img src={item.src} alt={item.title} loading="lazy" class={[...item.modifiers, ...item.tags].join(' ')} />
+        <img src={item.src} alt={item.title} loading="lazy" decoding="async" class={[...item.modifiers, ...item.tags].join(' ')} />
       {/if}
 
       <p class="title">{item.title}</p>
@@ -77,6 +94,9 @@
   {/each}
 </main>
 
+{#if hasMore}
+  <div class="sentinel" use:loadMore></div>
+{/if}
 
 {#if open}
   <!-- svelte-ignore a11y_click_events_have_key_events -->
