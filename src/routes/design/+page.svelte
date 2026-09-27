@@ -82,7 +82,7 @@
       {#if item.video}
         <video src={item.src} class={[...item.modifiers, ...item.tags].join(' ')} muted loop autoplay playsinline />
       {:else}
-        <img src={item.src} alt={item.title} loading="lazy" decoding="async" class={[...item.modifiers, ...item.tags].join(' ')} />
+        <img src={item.thumb ?? item.src} alt={item.title} loading="lazy" decoding="async" class={[...item.modifiers, ...item.tags].join(' ')} />
       {/if}
 
       <p class="title">{item.title}</p>

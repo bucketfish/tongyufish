@@ -1,18 +1,44 @@
 // this scans the folder for the images that go into the portfolio, sorts and tags them etc
 
-import { readdir, readFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { readdir, readFile, mkdir, stat } from 'node:fs/promises';
+import { join, relative, dirname } from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const ROOT = 'static/w';
+const THUMB_DIR = 'static/w/_thumb';
+const THUMB_WIDTH = 600;
 const MEDIA = /\.(png|jpe?g|gif|webp|avif|svg|webm)$/i;
 const VIDEO = /\.webm$/i;
 
-// SMALL HELPER FUNCTIONS
 const slugify = (s) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-// combines whole thing into one url
 const url = (...parts) => encodeURI('/' + join('w', ...parts));
+
+async function thumbnail(srcPath, relParts) {
+  if (VIDEO.test(srcPath) || /\.(gif|svg)$/i.test(srcPath)) return null;
+
+  const rel = relParts.join('/');
+  const thumbPath = join(THUMB_DIR, rel.replace(/\.[^.]+$/, '.webp'));
+
+  try {
+    const [srcStat, thumbStat] = await Promise.all([
+      stat(srcPath),
+      stat(thumbPath).catch(() => null)
+    ]);
+    if (thumbStat && thumbStat.mtimeMs >= srcStat.mtimeMs) {
+      return encodeURI('/' + join('w', '_thumb', rel.replace(/\.[^.]+$/, '.webp')));
+    }
+  } catch { /* source missing, skip */ }
+
+  try {
+    await mkdir(dirname(thumbPath), { recursive: true });
+    execFileSync('magick', [srcPath, '-resize', `${THUMB_WIDTH}x>`, '-quality', '75', thumbPath]);
+    return encodeURI('/' + join('w', '_thumb', rel.replace(/\.[^.]+$/, '.webp')));
+  } catch {
+    return null;
+  }
+}
 
 
 // PARSING FUNCTIONS
@@ -56,10 +82,11 @@ async function readImages(dir, relParts) {
     .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 
   // parse the sub-folder entries and keep the name as caption (optional)
-  return entries.map(e => {
+  return Promise.all(entries.map(async e => {
     const { title } = parseName(e.name);
-    return { src: url(...relParts, e.name), caption: title || null, video: VIDEO.test(e.name) };
-  });
+    const thumb = await thumbnail(join(dir, e.name), [...relParts, e.name]);
+    return { src: url(...relParts, e.name), thumb, caption: title || null, video: VIDEO.test(e.name) };
+  }));
 }
 
 // optional _note.md in a work for additional explanation if we want.
@@ -103,6 +130,7 @@ export async function scanWorks() {
         collectionName: null,
         images,
         src: images[0].src,
+        thumb: images[0].thumb,
         video: images[0].video,
         count: images.length
       });
@@ -145,12 +173,14 @@ export async function scanWorks() {
           collectionName: coll.name,
           images,
           src: images[0].src,
+          thumb: images[0].thumb,
           video: images[0].video,
           count: images.length
         });
       }
     } else if (MEDIA.test(entry.name)) {
       const { date, title, tags, modifiers, credit, link } = parseName(entry.name);
+      const thumb = await thumbnail(join(ROOT, entry.name), [entry.name]);
 
       items.push({
         id: entry.name,
@@ -164,8 +194,9 @@ export async function scanWorks() {
         note: null,
         collection: null,
         collectionName: null,
-        images: [{ src: url(entry.name), caption: null, video: VIDEO.test(entry.name) }],
+        images: [{ src: url(entry.name), thumb, caption: null, video: VIDEO.test(entry.name) }],
         src: url(entry.name),
+        thumb,
         video: VIDEO.test(entry.name),
         count: 1
       });

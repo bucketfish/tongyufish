@@ -1,6 +1,7 @@
 node_modules
 
 # Output
+static/w/_thumb
 .output
 .vercel
 .netlify
