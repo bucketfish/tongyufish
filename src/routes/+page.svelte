@@ -45,8 +45,8 @@
 </script>
 
 <svelte:head>
-  <title>tongyu</title>
-  <meta property="og:title" content="tongyu" />
+  <title>tongyu's website</title>
+  <meta property="og:title" content="tongyu's website" />
   <meta property="og:image" content="/ogimg.png" />
   <meta property="og:type" content="website" />
 </svelte:head>
