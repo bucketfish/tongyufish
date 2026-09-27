@@ -53,6 +53,13 @@
   }
 </script>
 
+<svelte:head>
+  <title>tongyu ~ portfolio</title>
+  <meta property="og:title" content="tongyu ~ portfolio" />
+  <meta property="og:image" content="/design_ogimg.png" />
+  <meta property="og:type" content="website" />
+</svelte:head>
+
 <svelte:window onkeydown={onKey} />
 
 <div id="intro">

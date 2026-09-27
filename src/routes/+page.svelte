@@ -44,6 +44,13 @@
 
 </script>
 
+<svelte:head>
+  <title>tongyu</title>
+  <meta property="og:title" content="tongyu" />
+  <meta property="og:image" content="/ogimg.png" />
+  <meta property="og:type" content="website" />
+</svelte:head>
+
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <main on:mousemove={handleMousemove}>
@@ -64,6 +71,7 @@
     <p class="subtitle rest">hello, i’m</p>
     <h1>tongyu!</h1>
     <ul class="rest">
+    <li><p>20, singapore & los angeles</p></li>
     <li><p>i'm a first-year cognitive science student @ UCLA</p></li>
     <li><p>previously, i took a gap year @ <a href="https://hackclub.com" target="_blank">hack club</a></p></li>
     </ul>
