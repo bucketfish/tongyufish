@@ -54,7 +54,7 @@
     <div class="section">
       <p><strong>Key decisions</strong></p>
       <p><strong><em>A collaborative logo</em></strong> — one of the first key decisions we had to make was creating the logo. The other designer and I independently came up with several designs, asked the community for feedback, then combined our best ideas, trading the file back and forth to create a logo that we were proud of.</p>
-      <p>Right before finalizing it, I added a face and limbs on a whim, and the Starling — the mascot for Stardance — was born! My co-designer then proceeded to spin-off the Starling for various key pieces of art that added to the playfulness and approachability of the site.</p>
+      <p>Right before finalizing it, I added a face and limbs on a whim, and the Starling — the mascot for Stardance — was born! My co-designer then proceeded to spin off the Starling for various key pieces of art that added to the playfulness and approachability of the site.</p>
     </div>
 
     <figure>
@@ -86,7 +86,7 @@
 
     <div class="section">
       <p><strong>Other features</strong></p>
-      <p>We also spent countless hours improving the onboarding flow, adding campaigns and streaks and minigames and referral raffles to increase signups. I hadn't realized just how many features we added in the span of 3-4 months as a tiny team, but the small team size and independence meant that we were very agile and could prototype, iterate, and ship in the matter of days. Here are a few snapshots of other features I worked on:</p>
+      <p>We also spent countless hours improving the onboarding flow, adding campaigns and streaks and minigames and referral raffles to increase signups. I hadn't realized just how many features we added in the span of 3-4 months as a tiny team, but the small team size and independence meant that we were very agile and could prototype, iterate, and ship in a matter of days. Here are a few snapshots of other features I worked on:</p>
     </div>
 
     <figure class="trio">

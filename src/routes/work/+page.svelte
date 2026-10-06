@@ -21,7 +21,7 @@
       label: 'Solo, Singapore game jam',
       alt: 'Overglade',
       href: '/work/milkyway-overglade',
-      desc: 'A gamified online challenge, 50 teens flying solo to Singapore, an <strong>augmented reality game x game jam</strong>.',
+      desc: 'A gamified online challenge, 50 teens from 18 countries flying to Singapore, an <strong>alternate reality game x game jam</strong>.',
       role: 'Worked solo on design, engineering, event logistics.',
       date: 'Oct 2025–Mar 2026',
     },
@@ -35,7 +35,7 @@
       href: '/work/tambourine-story',
       tint: true,
       desc: 'A story-driven rhythm game you play by shaking your iPad.',
-      role: 'Solo project, Apple WWDC Swift Student Challenge <strong>Distinguished Winner</strong>.',
+      role: 'Solo project, <strong>Apple WWDC Swift Student Challenge Distinguished Winner</strong>.',
       date: 'Dec 2023–Feb 2024',
     },
   ];

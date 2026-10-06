@@ -38,7 +38,7 @@
       <div class="overview">
         <p><strong>Overview</strong></p>
         <p>Tambourine Story was created for Swift Student Challenge 2024. It's a rhythm game — but instead of tapping the screen like most rhythm games, it asks the user to shake the iPad like a real-life tambourine.</p>
-        <p>This game is my tribute to music and collaboration — how each and every one of us are able to be a part of something greater than ourselves, through collaborative art, through playing together.</p>
+        <p>This game is my tribute to music and collaboration — how each and every one of us is able to be a part of something greater than ourselves, through collaborative art, through playing together.</p>
         <p>The project won Distinguished Winner in Swift Student Challenge 2024 and was featured on various platforms, such as <a href="https://www.channelnewsasia.com/cna-insider/ground-up/love-video-games-child-led-student-top-award-apple-hq-america-4647466" target="_blank">ChannelNewsAsia</a>, <a href="https://elle.com.sg/life-culture/asian-students-apple-swift-challenge-2024/" target="_blank">ELLE Singapore</a>, and the <a href="https://apps.apple.com/sg/story/id1748957781" target="_blank">App Store</a>.</p>
         <p>The project was also <a href="https://esquiresg.com/apples-tim-cook-meets-with-regional-game-devs/" target="_blank">presented to Tim Cook</a> (then-CEO of Apple) when he visited Singapore in April 2024, as well as to the public at Apple Developer Center Singapore.</p>
       </div>
@@ -115,7 +115,7 @@
     </figure>
 
     <div class="section credits">
-      <p>Thank you to the Swift in Singapore community for being so supportive, and thank you for Apple for all the opportunities I was given.</p>
+      <p>Thank you to the Swift in Singapore community for being so supportive, and thank you to Apple for all the opportunities I was given.</p>
     </div>
 
     <nav class="article-nav">

@@ -21,13 +21,13 @@
 
     <div class="info-grid">
       <div class="meta">
-        <p><strong>Project duration:</strong> Oct 2025–Feb 2026</p>
+        <p><strong>Project duration:</strong> Oct 2025–Mar 2026</p>
 
         <div class="meta-group">
           <p><strong>Platform:</strong> Web</p>
           <p><strong>Tools:</strong> Figma, Svelte, Godot, AI-assisted coding</p>
           <p><strong>Roles:</strong> Concept, branding, UI/UX, engineering, game design, logistics</p>
-          <p><strong>Team size:</strong> 1</p>
+          <p><strong>Team size:</strong> Solo lead, with volunteers and event staff</p>
         </div>
 
         <div class="meta-group">
@@ -55,7 +55,7 @@
     <div class="section">
       <p><strong>Key decisions</strong></p>
       <p><strong><em>A playful platform</em></strong> — inspired by social games I played online, I wanted the Milkyway platform to feel customizable and playful, like a game in and of itself. I themed the site around an axolotl mascot named Mimi, and gave each user customizable rooms that they can improve as they worked on their game.</p>
-      <p>Users can also add each others as friends, view other profiles like a neighborhood, and leave sticky notes on each others' houses to encourage them. It was really sweet to read the community interactions.</p>
+      <p>Users can also add each other as friends, view other profiles like a neighborhood, and leave sticky notes on each other's houses to encourage them. It was really sweet to read the community interactions.</p>
     </div>
 
     <figure class="trio">
@@ -99,8 +99,8 @@
     <figure class="trio">
       <div class="trio-images">
         <video src="/work/milkyway-overglade/landing-animation.webm" autoplay loop muted playsinline style="flex-grow: 1.77"></video>
-        <img src="/work/milkyway-overglade/referral-system.webp" alt="Referral system with game-like interface" style="flex-grow: 1.12" />
-        <img src="/work/milkyway-overglade/rainbow-bridge.webp" alt="Pre-event rainbow bridge quest" style="flex-grow: 1.43" />
+        <img src="/work/milkyway-overglade/referral-system.webp" alt="Referral system with game-like interface" style="flex-grow: 1.43" />
+        <img src="/work/milkyway-overglade/rainbow-bridge.webp" alt="Pre-event rainbow bridge quest" style="flex-grow: 1.12" />
       </div>
       <figcaption>1. A playful introduction animation on the Milkyway landing page that I drew.<br>2. The referral system drove signups with a game-like interface.<br>3. A pre-event quest during Overglade had participants hunting for images that formed a "rainbow bridge" to get to the Overglade world.</figcaption>
     </figure>
@@ -111,7 +111,7 @@
         <img src="/work/milkyway-overglade/karaoke.webp" alt="Spontaneous karaoke sessions" style="flex-grow: 1.79" />
         <img src="/work/milkyway-overglade/project-showcase.webp" alt="Project showcase at the end of the game jam" style="flex-grow: 1.77" />
       </div>
-      <figcaption>1. A beach barbeque and long conversations with Zach, the founder of Hack Club.<br>2. Spontaneous karaoke sessions that happened almost every night.<br>3. Project showcase at the end of the game jam. There were some really incredible ones!</figcaption>
+      <figcaption>1. A beach barbecue and long conversations with Zach, the founder of Hack Club.<br>2. Spontaneous karaoke sessions that happened almost every night.<br>3. Project showcase at the end of the game jam. There were some really incredible ones!</figcaption>
     </figure>
 
     <div class="section">
