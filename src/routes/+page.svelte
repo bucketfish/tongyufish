@@ -76,7 +76,7 @@
     <li><p>previously, i took a gap year @ <a href="https://hackclub.com" target="_blank">hack club</a></p></li>
     </ul>
     <ul class="rest">
-    <li><p><a href="/design">i draw, design, & code </a></p></li>
+    <li><p><a href="/work">i draw, design, & code </a></p></li>
     <li><p><a href="https://journal.tongyu.fish">i also have a journal</a></p></li>
 
     <li><p>say hi at <a href="mailto:hi@tongyu.fish">hi@tongyu.fish!</a></p></li>
